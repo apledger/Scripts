@@ -57,7 +57,7 @@ if ! grep -q 'zsh-autosuggestions' $HOME/.zshrc; then
   ' $HOME/.zshrc
 fi
 
-echo "Installing Arc, Around"
+echo "Installing Arc, Around, 1Password"
 brew install arc
 brew install around
 brew install 1password
@@ -91,4 +91,4 @@ echo "Installing Visual Studio Code..."
 brew install --cask visual-studio-code
 
 # Final message to the user
-echo "Installation complete! Please restart your terminal or run 'source ~/.zshrc' to apply all changes."
+echo "Installation complete!"
