@@ -8,9 +8,13 @@
 
 `brew install git`
 
+3. Add SSH Key
+
+`ssh-keygen -t ed25519 -C "email@example.com" | pbcopy`
+
 3. Clone this repo
 
-`git clone https://github.com/apledger/Scripts.git`
+`git clone git@github.com:apledger/Scripts.git`
 
 4. Run setup script
 
