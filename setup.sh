@@ -62,15 +62,12 @@ brew install arc
 brew install around
 brew install 1password
 
-# Install Git, NVM, Node, and PNPM
-echo "Installing NVM, Node.js, and PNPM..."
-brew install nvm
-mkdir -p $HOME/.nvm
-
-# Setup NVM
-echo 'export NVM_DIR="$HOME/.nvm"' >> $HOME/.zshrc
-echo '[ -s "'"$BREW_PREFIX"'/opt/nvm/nvm.sh" ] && . "'"$BREW_PREFIX"'/opt/nvm/nvm.sh"' >> $HOME/.zshrc # This loads nvm
-echo '[ -s "'"$BREW_PREFIX"'/opt/nvm/etc/bash_completion" ] && . "'"$BREW_PREFIX"'/opt/nvm/etc/bash_completion"' >> $HOME/.zshrc # This loads nvm bash_completion
+# Install fnm, node, and pnpm
+echo "Installing fnm and pnpm"
+brew install fnm
+echo 'eval "$(fnm env --use-on-cd)"' >> $HOME/.zshrc
+fnm install --latest
+brew install pnpm
 
 # Add aliases
 echo "Adding aliases"
@@ -79,12 +76,6 @@ echo 'alias ms="/bin/bash ~/Scripts/makeswift.sh"' >> $HOME/.zshrc
 
 # Reload shell
 source $HOME/.zshrc
-
-# Install latest Node.js version
-nvm install node
-
-# Install PNPM
-npm install -g pnpm
 
 # Install Visual Studio Code
 echo "Installing Visual Studio Code..."
