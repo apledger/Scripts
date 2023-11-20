@@ -63,6 +63,10 @@ brew install around
 brew install 1password
 
 # Install fnm, node, and pnpm
+echo "Installing Docker"
+brew install --cask docker
+
+# Install fnm, node, and pnpm
 echo "Installing fnm and pnpm"
 brew install fnm
 echo 'eval "$(fnm env --use-on-cd)"' >> $HOME/.zshrc
